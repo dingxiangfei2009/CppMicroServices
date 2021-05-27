@@ -177,6 +177,12 @@ TEST_F(BundleHooksTest, TestEventHook)
   ASSERT_TRUE(bundleA);
 
   bundleA.Start();
+
+  auto a1 = bundleListener.events.at(0).GetType();
+  auto a2 = bundleListener.events.at(1).GetType();
+  auto a3 = bundleListener.events.at(2).GetType();
+  auto a4 = bundleListener.events.at(3).GetType();
+
   //Test for received load bundle events"
   ASSERT_EQ(bundleListener.events.size(), 4);
 
